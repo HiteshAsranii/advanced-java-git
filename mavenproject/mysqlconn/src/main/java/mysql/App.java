@@ -20,6 +20,10 @@ public class App
 			System.out.println("Cannot Connect to database");
 		}
         System.out.println("Connected");
+        UserDao userDao = new UserDaoImpl();
+        userDao.save(new User("Hitesh"));
+        userDao.save(new User("Divya"));
+        
         try {
 			db.close();
 		} catch (SQLException e) {

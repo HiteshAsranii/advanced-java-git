@@ -15,6 +15,9 @@ public class Dbconn {
  private Dbconn() {
 	 
  }
+ public Connection getConnection() {
+	 return conn;
+ }
  public void connect() throws SQLException {
 	 conn = DriverManager.getConnection(URL, "hites","");
  }
